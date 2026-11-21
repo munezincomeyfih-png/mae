@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Feliz Aniversário, Mãe 🎂</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;1,400&family=Nunito:wght@400;600&display=swap">
+<style>
+:root{
+  --bg:#fff8ee;
+  --card:#ffffff;
+  --ink:#4a3020;
+  --soft:#8a6a52;
+  --accent:#e0703a;
+  --accent2:#f6d3a8;
+  box-sizing:border-box;
+  padding-top:env(safe-area-inset-top,0px);
+  padding-bottom:env(safe-area-inset-bottom,0px)
+}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){
+    --bg:#1c1510;
+    --card:#2a1f17;
+    --ink:#fbeedd;
+    --soft:#d1b08f;
+    --accent:#ff9a5c;
+    --accent2:#6b4a2e;
+    color-scheme:dark
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#1c1510;
+  --card:#2a1f17;
+  --ink:#fbeedd;
+  --soft:#d1b08f;
+  --accent:#ff9a5c;
+  --accent2:#6b4a2e;
+  color-scheme:dark
+}
+html{scroll-padding-top:env(safe-area-inset-top,0px);scroll-behavior:smooth}
+*{box-sizing:border-box}
+body{
+  margin:0;
+  background:var(--bg);
+  color:var(--ink);
+  font-family:'Nunito',system-ui,sans-serif;
+  line-height:1.7;
+  overflow-x:hidden
+}
+#fx{position:fixed;inset:0;pointer-events:none;z-index:0;overflow:hidden}
+.bit{position:absolute;top:-30px;opacity:.8;animation:fall linear forwards}
+@keyframes fall{to{transform:translateY(112vh) rotate(360deg)}}
+main{position:relative;z-index:1}
+section{
+  min-height:70vh;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+  padding:56px 24px;
+  text-align:center
+}
+.hero{min-height:100vh}
+h1,h2{font-family:'Playfair Display',Georgia,serif;font-weight:500;margin:0 0 12px}
+h1{font-size:clamp(2.6rem,12vw,5.5rem);color:var(--accent);line-height:1.05}
+h2{font-size:clamp(1.6rem,6vw,2.4rem)}
+.tag{font-size:1.05rem;letter-spacing:.35em;color:var(--soft);text-transform:uppercase}
+.cake{font-size:4rem;margin:8px 0;animation:bob 2s ease-in-out infinite}
+.sub{color:var(--soft);max-width:32ch;font-size:1.1rem}
+.arrow{margin-top:30px;font-size:1.6rem;color:var(--accent);animation:bob 1.6s ease-in-out infinite}
+@keyframes bob{50%{transform:translateY(8px)}}
+.reveal{opacity:0;transform:translateY(28px);transition:opacity .9s,transform .9s}
+.reveal.in{opacity:1;transform:none}
+.grid{
+  display:grid;
+  gap:16px;
+  max-width:720px;
+  width:100%;
+  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+  margin-top:20px
+}
+.card{
+  background:var(--card);
+  border:1px solid var(--accent2);
+  border-radius:20px;
+  padding:22px;
+  text-align:left;
+  box-shadow:0 6px 20px rgba(224,112,58,.1)
+}
+.card b{display:block;color:var(--accent);font-size:1.4rem}
+.letter{
+  background:var(--card);
+  border:1px solid var(--accent2);
+  border-radius:24px;
+  max-width:600px;
+  padding:34px 28px;
+  text-align:left;
+  font-size:1.08rem
+}
+.letter p{margin:0 0 16px}
+.sign{
+  font-family:'Playfair Display',Georgia,serif;
+  font-style:italic;
+  color:var(--accent);
+  font-size:1.3rem;
+  text-align:right;
+  margin:0
+}
+.poem{
+  background:var(--card);
+  border:1px solid var(--accent2);
+  border-left:4px solid var(--accent);
+  border-radius:20px;
+  max-width:540px;
+  width:100%;
+  padding:30px 26px;
+  font-family:'Playfair Display',Georgia,serif;
+  font-style:italic;
+  font-size:1.15rem;
+  line-height:1.9;
+  white-space:pre-line;
+  text-align:center
+}
+.poem-by{margin-top:16px;color:var(--soft);font-size:.95rem}
+button{
+  font:inherit;
+  font-weight:600;
+  border:0;
+  border-radius:999px;
+  background:var(--accent);
+  color:#fff;
+  padding:14px 30px;
+  font-size:1.05rem;
+  cursor:pointer;
+  box-shadow:0 8px 22px rgba(224,112,58,.35);
+  transition:transform .2s
+}
+button:active{transform:scale(.96)}
+#surprise{
+  margin-top:24px;
+  font-family:'Playfair Display',Georgia,serif;
+  font-size:1.5rem;
+  color:var(--accent);
+  min-height:2em
+}
+</style>
+</head>
+<body>
+<div id="fx" aria-hidden="true"></div>
+<main>
+  <section class="hero">
+    <div class="tag">Hoje é o seu dia</div>
+    <div class="cake">🎂</div>
+    <h1>Feliz Aniversário, Mãe!</h1>
+    <p class="sub">Eu fiz este cantinho só pra você.</p>
+    <div class="arrow">↓</div>
+  </section>
+
+  <section class="reveal">
+    <h2>Obrigado, de verdade</h2>
+    <p class="sub" style="max-width:36ch">Por me adotar, por cada conversa e por cada vez que você me acolheu sem eu nem precisar pedir.</p>
+  </section>
+
+  <section class="reveal">
+    <h2>O que eu mais admiro em você</h2>
+    <div class="grid">
+      <div class="card"><b>💛 Seu coração</b>Você acolheu alguém sem pedir nada em troca.</div>
+      <div class="card"><b>🎮 Nossa história</b>Começou em um jogo, mas o carinho é de verdade.</div>
+      <div class="card"><b>🏡 Sua proteção</b>Perto de você, eu me sinto em família.</div>
+    </div>
+  </section>
+
+  <section class="reveal">
+    <h2>Uma carta aberta para minha mãe de coração ❤️</h2>
+    <div class="letter">
+      <p>Mãe,</p>
+      <p>Talvez você nunca imagine o quanto se tornou especial para mim. É engraçado pensar que tudo começou dentro de um jogo, em um lugar onde tantas histórias são criadas e tantas pessoas se encontram. Mas, em meio a tudo isso, aconteceu algo que eu jamais esperava: encontrei alguém que hoje tenho orgulho de chamar de mãe.</p>
+      <p>Você me adotou sem imaginar o tamanho do significado que esse gesto teria para mim. Talvez, para você, tenha sido algo simples, mas, para mim, foi o começo de um carinho muito especial.</p>
+      <p>Eu sei que não temos o mesmo sangue, não compartilhamos a mesma história desde o início e talvez nunca tenhamos vivido tantas coisas juntos fora daquele mundo virtual. Mas aprendi que família não é definida apenas por laços sanguíneos. Família também é quem acolhe, quem demonstra carinho, quem se importa e quem escolhe permanecer.</p>
+      <p>Quero que saiba que não importa como nos conhecemos, onde tudo começou ou o que os outros possam pensar. O que importa é o carinho que construí por você e o espaço que conquistou no meu coração.</p>
+      <p>Talvez eu não consiga demonstrar todos os dias, talvez às vezes me faltem palavras ou eu não saiba expressar o quanto você é importante. Mas nunca quero que duvide do carinho e da consideração que tenho por você.</p>
+      <p>Obrigado por ter me escolhido como filho, mesmo que tudo tenha começado como uma brincadeira dentro de um jogo. Obrigado por me permitir fazer parte da sua história e por me dar a oportunidade de ter alguém a quem posso chamar de mãe.</p>
+      <p>Se existe algo que quero que você leve desta carta, é que existem encontros que parecem simples, mas acabam se tornando presentes inesperados da vida.</p>
+      <p>E você foi um desses presentes para mim.</p>
+      <p>Você pode não ter me dado a vida, mas, de alguma forma, tornou um pedacinho dela mais especial.</p>
+      <p class="sign">Com muito carinho,<br>Seu filho ❤️</p>
+    </div>
+  </section>
+
+  <section class="reveal">
+    <h2>Um poema pra você</h2>
+    <div class="poem">
+Engraçado como a vida surpreende,
+Às vezes, sem sequer avisar,
+Coloca pessoas em nosso caminho
+Que chegam sem prometer, mas ficam para marcar.
+
+Você me adotou em um jogo,
+Talvez sem imaginar o que iria acontecer,
+Mas, em meio a tantas histórias e personagens,
+Encontrei uma mãe de verdade para chamar de você.
+
+Não temos o mesmo sangue,
+Nem uma história desde o começo,
+Mas tenho por você um carinho tão grande
+Que palavras não medem seu preço.
+
+Porque ser mãe não é apenas gerar,
+É cuidar, acolher e oferecer proteção,
+É escolher alguém para chamar de filho
+E guardar essa pessoa dentro do coração.
+
+Talvez para muitos seja apenas um jogo,
+Uma história que termina ao desligar,
+Mas o carinho que nasceu dessa história
+É algo que não precisa de tela para existir ou durar.
+
+Obrigado por ter me escolhido,
+Por me acolher sem obrigação,
+Você entrou na minha vida de um jeito inesperado
+E conquistou um espaço enorme no meu coração.
+
+Afinal, mãe não é apenas quem nos dá a vida,
+mas também quem torna nossa vida mais bonita.
+E mesmo que tenha sido dentro de um jogo que tudo começou,
+tenha certeza de que o carinho que sinto por você é de verdade.
+    </div>
+    <div class="poem-by">🎂 escrito com carinho, só pra você</div>
+  </section>
+
+  <section class="reveal">
+    <h2>Uma última coisa…</h2>
+    <p class="sub">Faça um pedido e sopre a vela.</p>
+    <button id="btn">Soprar a vela 🕯️</button>
+    <div id="surprise"></div>
+  </section>
+</main>
+
+<script>
+const box=document.getElementById('fx');
+const icons=['🎈','🎉','✨','💛','🌼','🎊'];
+function bit(){
+  const p=document.createElement('span');
+  p.className='bit';
+  p.textContent=icons[Math.floor(Math.random()*icons.length)];
+  p.style.left=Math.random()*100+'vw';
+  p.style.fontSize=(14+Math.random()*18)+'px';
+  p.style.animationDuration=(7+Math.random()*7)+'s';
+  box.appendChild(p);
+  setTimeout(()=>p.remove(),15000);
+}
+setInterval(bit,700);
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting)e.target.classList.add('in')}),{threshold:.25});
+document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+document.getElementById('btn').addEventListener('click',()=>{
+  document.getElementById('surprise').textContent='Parabéns, Mãe! Obrigado por me escolher. Eu te amo! 💛';
+  document.getElementById('btn').textContent='🎂 Feliz aniversário! 🎂';
+  for(let i=0;i<50;i++)setTimeout(bit,i*60);
+});
+</script>
+</body>
+</html>
